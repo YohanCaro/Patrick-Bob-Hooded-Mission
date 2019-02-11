@@ -8,10 +8,10 @@ import co.setup_men.patrick.controller.KeyController;
 
 public class MainWindow extends JFrame {
 	
-	private GamePanel gameP;
+	private GamePanel gamePanel;
 	
 	public MainWindow() {
-		this.gameP = new GamePanel();
+		this.gamePanel = new GamePanel();
 		this.init();
 	}
 	
@@ -20,14 +20,10 @@ public class MainWindow extends JFrame {
 		this.setSize(700, 600);
 		this.setLayout(new BorderLayout());
 		this.setResizable(false);
-		this.add(gameP);		
+		this.add(this.gamePanel);		
 		this.addKeyListener(KeyController.getInstance());
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setVisible(true);
-	}
-
-	public GamePanel getGameP() {
-		return gameP;
 	}
 }
